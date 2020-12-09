@@ -7,13 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 
 @SpringBootApplication
 public class DemoApplication implements ApplicationRunner {
 
+	@Resource
+    private ApplicationContext applicationContext;
 
-    private static ApplicationContext applicationContext;
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
 	}
